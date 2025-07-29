@@ -6,10 +6,11 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
+    "@cap-js/hana": "^2",
     "@sap/cds": "^9",
-    "express": "^4",
+    "@sap/cds-common-content": "^3.0.1",
     "@sap/xssec": "^4",
-    "@cap-js/hana": "^2"
+    "express": "^4"
   },
   "engines": {
     "node": ">=20"
@@ -20,7 +21,8 @@
     "@sap/cds-dk": ">=8"
   },
   "scripts": {
-    "start": "cds-serve"
+    "start": "cds-serve",
+    "watch-interactions": "cds watch --open interactions/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "cds": {
     "requires": {
@@ -28,5 +30,8 @@
         "auth": "xsuaa"
       }
     }
-  }
+  },
+  "sapux": [
+    "app/interactions"
+  ]
 }
